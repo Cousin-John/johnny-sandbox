@@ -1,0 +1,50 @@
+./cloud-revision-tags.sh closer-api-large northamerica-northeast1 closer-production-321417
+
+./cloud-revision-tags.sh closer-api-v2 northamerica-northeast1 closer-production-321417
+
+gcloud run revisions list \
+  --service closer-api-large \
+  --region northamerica-northeast1 \
+  --project closer-production-321417 \
+  --filter="spec.tags:*" \
+  --format="table(metadata.name:label=REVISION, spec.tags:label=TAGS)"
+
+
+
+
+ ~/Doc/G/johnny-sandbox │ main ?1  gcloud run services list --project closer-production-321417
+   SERVICE           REGION                   URL                                                                    LAST DEPLOYED BY                                                           LAST DEPLOYED AT
+✔  closer-admin-v2   northamerica-northeast1  https://closer-admin-v2-580770246981.northamerica-northeast1.run.app   john.friesen@lawlabs.ca                                                    2025-04-22T16:30:30.731328Z
+✔  closer-api-large  northamerica-northeast1  https://closer-api-large-580770246981.northamerica-northeast1.run.app  closer-prod-cloud-run-sa@closer-production-321417.iam.gserviceaccount.com  2025-04-22T17:02:46.841494Z
+✔  closer-api-v2     northamerica-northeast1  https://closer-api-v2-580770246981.northamerica-northeast1.run.app     closer-prod-cloud-run-sa@closer-production-321417.iam.gserviceaccount.com  2025-04-22T17:01:55.765842Z
+✔  closer-documizer  northamerica-northeast1  https://closer-documizer-580770246981.northamerica-northeast1.run.app  closer-prod-cloud-run-sa@closer-production-321417.iam.gserviceaccount.com  2025-04-22T17:00:01.139121Z
+✔  closer-pdf-api    northamerica-northeast1  https://closer-pdf-api-580770246981.northamerica-northeast1.run.app    julian.paez@lawlabs.ca                                                     2025-03-20T21:14:48.725556Z
+✔  closer-web        northamerica-northeast1  https://closer-web-580770246981.northamerica-northeast1.run.app        closer-prod-cloud-run-sa@closer-production-321417.iam.gserviceaccount.com  2025-04-22T17:04:39.859217Z
+✔  closer-webdav     northamerica-northeast1  https://closer-webdav-580770246981.northamerica-northeast1.run.app     john.friesen@lawlabs.ca                                                    2025-04-16T14:34:59.292186Z
+✔  closer-word       northamerica-northeast1  https://closer-word-580770246981.northamerica-northeast1.run.app       closer-prod-cloud-run-sa@closer-production-321417.iam.gserviceaccount.com  2025-04-22T15:34:29.350455Z
+
+
+
+
+
+gcloud run revisions describe
+  --namespace=closer-production-321417 \
+  --service closer-api-large \
+  --region northamerica-northeast1 \
+  --project closer-production-321417 \
+
+
+gcloud run revisions describe --region northamerica-northeast1 closer-api-large-c6e0f8e
+
+
+gcloud run services describe closer-api-large --region northamerica-northeast1 --project closer-production-321417 --platform managed \
+ --format 'table(
+    spec.traffic.tag:label=TAG,
+    spec.traffic.revisionName:label=REV,
+    spec.traffic.percent:label=PCT
+  )'
+
+gcloud run services describe closer-api-large --region northamerica-northeast1 --project closer-production-321417 --platform managed \
+ --format 'table(
+    spec.traffic.tag:label=TAG
+  )'
