@@ -1,0 +1,14 @@
+{
+    "mcpServers": {
+      "shortcut": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@shortcut/mcp@latest"
+        ],
+        "env": {
+          "SHORTCUT_API_TOKEN": "a9342668-23e4-440a-beb8-54b57f78e46d"
+        }
+      }
+    }
+  }

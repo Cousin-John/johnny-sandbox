@@ -1,0 +1,28 @@
+{
+  "iteration": {
+    "id": 22077,
+    "name": "Squad #6: Week 24-26, 2025",
+    "app_url": "https://app.shortcut.com/lawlabs/iteration/22077",
+    "status": "started",
+    "start_date": "2025-06-10",
+    "end_date": "2025-06-23",
+    "team_ids": ["6650d52c-739a-4a07-95a2-f4841272aeb6"],
+    "stats": {
+      "num_points_done": 0,
+      "num_related_documents": 0,
+      "num_stories_unstarted": 18,
+      "num_points_started": 0,
+      "num_points_unstarted": 0,
+      "num_stories_started": 9,
+      "num_stories_unestimated": 50,
+      "num_stories_backlog": 15,
+      "num_points_backlog": 0,
+      "num_points": 0,
+      "num_stories_done": 8
+    }
+  },
+  "stories": [
+    {"id":22024,"name":"Closer Web Clean-up Tasks","app_url":"https://app.shortcut.com/lawlabs/story/22024","archived":false,"team_id":"6650d52c-739a-4a07-95a2-f4841272aeb6","epic_id":null,"iteration_id":22077,"workflow_id":500002747,"workflow_state_id":500004494,"owner_ids":[],"requested_by_id":"66d5d6e9-94a9-4da3-9a91-0f1d09cd89b6"},
+    {"id":19794,"name":"Use NX for build process","app_url":"https://app.shortcut.com/lawlabs/story/19794","archived":false,"team_id":"6650d52c-739a-4a07-95a2-f4841272aeb6","epic_id":21241,"iteration_id":22077,"workflow_id":500002747,"workflow_state_id":500004494,"owner_ids":["66d5d6e9-94a9-4da3-9a91-0f1d09cd89b6"],"requested_by_id":"66d5d6e9-94a9-4da3-9a91-0f1d09cd89b6"}
+  ]
+} 
